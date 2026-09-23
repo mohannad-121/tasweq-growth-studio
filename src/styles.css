@@ -961,7 +961,14 @@ h3 {
   color: #f4f1e8 !important;
 }
 .chat-window .chat-user-message p {
-  color: #0b0d12 !important;
+  color: #fff !important;
+}
+.chat-window .chat-user-message [data-slot="message-content"] {
+  background: #4361ee !important;
+  color: #fff !important;
+}
+.chat-window [data-slot="message-content"] {
+  white-space: pre-line;
 }
 .quick-actions button {
   border-radius: 0 !important;

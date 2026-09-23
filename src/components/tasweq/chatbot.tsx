@@ -26,7 +26,14 @@ const quick = [
   { ar: "خدمات إنستغرام", en: "Instagram services" },
   { ar: "كيف أطلب الخدمة؟", en: "How do I request a service?" },
   { ar: "تواصل مع التسويق", en: "Contact Tasweq" },
+  { ar: "كيف أبدأ؟", en: "How do I get started?" },
+  { ar: "رابط إنستغرام", en: "Instagram link" },
 ];
+
+const welcomeMessage = (locale: "ar" | "en") =>
+  locale === "ar"
+    ? `أهلًا بك في تسويق! 👋✨\n\nأنا مساعدك السريع لخدمات نمو إنستغرام 📈\nأقدر أساعدك في الأسعار، المتابعين 👥، المشاهدات ▶️، واللايكات ❤️\n\nاكتب سؤالك براحتك، أو جرّب: “كم سعر 10K متابع؟” أو “كيف أتواصل معكم؟” 💬\n\nحسابنا الرسمي: https://instagram.com/tasweq.net1 🔗`
+    : `Welcome to Tasweq! 👋✨\n\nI’m your quick guide to Instagram growth services 📈\nI can help with prices, followers 👥, views ▶️, and likes ❤️\n\nAsk anything, or try: “What is the price of 10K followers?” or “How can I contact you?” 💬\n\nOfficial Instagram: https://instagram.com/tasweq.net1 🔗`;
 
 type ChatMessage = { id: number; role: "user" | "assistant"; text: string };
 
@@ -41,9 +48,7 @@ export function Chatbot() {
     {
       id: 1,
       role: "assistant",
-      text: ar
-        ? "أهلًا 👋 أنا مساعد تسويق. أقدر أساعدك بأسعار المتابعين والمشاهدات واللايكات على إنستغرام."
-        : "Hi 👋 I’m the Tasweq Assistant. I can help with Instagram followers, views, and likes pricing.",
+      text: welcomeMessage(locale),
     },
   ]);
   useEffect(() => {
@@ -150,7 +155,7 @@ export function Chatbot() {
             </Conversation>
 
             <div className="quick-actions">
-              {quick.slice(0, 4).map((item) => (
+              {quick.map((item) => (
                 <button key={item.en} onClick={() => send(item[locale])}>
                   {item[locale]}
                 </button>
