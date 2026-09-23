@@ -504,13 +504,17 @@ h3 {
   font-size: clamp(2rem, 3.4vw, 3.4rem);
   letter-spacing: -0.07em;
   line-height: 1;
+  white-space: nowrap;
 }
 .package-amount span {
   color: var(--muted-foreground);
   font-size: 0.8rem;
 }
 .package-price strong {
+  display: block;
   font-size: 1.8rem;
+  line-height: 1.1;
+  white-space: nowrap;
 }
 .package-price small {
   font-size: 0.72rem;
@@ -1066,7 +1070,16 @@ h3 {
     gap: 2rem;
   }
   .package-tile {
-    grid-template-columns: 48px 1fr auto;
+    grid-template-columns: 48px minmax(0, 1fr) minmax(148px, auto);
+    column-gap: 1.75rem;
+  }
+  .package-amount {
+    min-width: 0;
+  }
+  .package-price {
+    min-width: 148px;
+    padding-inline-start: 1.1rem;
+    border-inline-start: 1px solid #d8d4ca;
   }
   .package-tile button {
     grid-column: 2/-1;
@@ -1240,14 +1253,18 @@ h3 {
     gap: 0.4rem;
   }
   .package-tile {
-    grid-template-columns: 35px 1fr auto;
-    gap: 0.5rem;
+    grid-template-columns: 30px minmax(0, 1fr) minmax(124px, auto);
+    column-gap: 1rem;
   }
   .package-amount strong {
     font-size: 2rem;
   }
   .package-price strong {
     font-size: 1.3rem;
+  }
+  .package-price {
+    min-width: 124px;
+    padding-inline-start: 0.75rem;
   }
   .yellow-moment {
     padding: 6rem 0;

@@ -123,13 +123,13 @@ export function Marketplace() {
               >
                 <span className="package-number">0{i + 1}</span>
                 <div className="package-amount">
-                  <strong>{pack.amount.toLocaleString("en-US")}</strong>
+                  <strong dir="ltr">{pack.amount.toLocaleString("en-US")}</strong>
                   <span>
                     <ServiceIcon /> {meta.unit}
                   </span>
                 </div>
                 <div className="package-price">
-                  <strong>{formatPrice(pack.price)}</strong>
+                  <strong dir="ltr">{formatPrice(pack.price)}</strong>
                   <small>
                     {currency === "JOD"
                       ? ar
