@@ -1,0 +1,11 @@
+import type { Localized } from "./platforms";
+
+export const faqs: { question: Localized; answer: Localized }[] = [
+  { question: { ar: "ما الخدمات التي توفرها تسويق؟", en: "What services does Tasweq provide?" }, answer: { ar: "نوفر فئات متعددة تشمل المتابعين والإعجابات والمشاهدات والمشاركات وخدمات أخرى تختلف حسب المنصة.", en: "We offer categories including followers, likes, views, shares, and other services that vary by platform." } },
+  { question: { ar: "ما المنصات المدعومة؟", en: "Which platforms are supported?" }, answer: { ar: "ندعم حاليًا إنستغرام وتيك توك ويوتيوب وفيسبوك وإكس وتيليغرام وسناب شات، ويمكن إضافة منصات أخرى لاحقًا.", en: "We currently support Instagram, TikTok, YouTube, Facebook, X, Telegram, and Snapchat, with more platforms easy to add later." } },
+  { question: { ar: "كيف أختار الباقة المناسبة؟", en: "How do I choose the right package?" }, answer: { ar: "ابدأ بتحديد المنصة والخدمة والكمية. ويمكنك التواصل معنا إذا احتجت مساعدة قبل إرسال طلبك.", en: "Start with your platform, service, and quantity. Contact us if you need guidance before sending your request." } },
+  { question: { ar: "هل يمكنني طلب باقة مخصصة؟", en: "Can I request a custom package?" }, answer: { ar: "نعم، تواصل مع فريق الدعم لمناقشة الاحتياج والكمية المناسبة.", en: "Yes. Contact support to discuss the right mix and quantity for your needs." } },
+  { question: { ar: "هل تتوفر الخدمة عالميًا؟", en: "Is Tasweq available worldwide?" }, answer: { ar: "الخدمات مصممة للعملاء حول العالم، وقد تختلف الخيارات المتاحة حسب المنصة والخدمة.", en: "Services are designed for customers worldwide. Availability may vary by platform and service." } },
+  { question: { ar: "كيف أتواصل مع الدعم؟", en: "How can I contact support?" }, answer: { ar: "يمكنك استخدام مساعد تسويق أو روابط إنستغرام وواتساب والبريد في قسم التواصل.", en: "Use the Tasweq Assistant or the Instagram, WhatsApp, and email links in the contact section." } },
+  { question: { ar: "متى يتوفر الدفع أونلاين؟", en: "When will online payment be available?" }, answer: { ar: "الدفع والطلب الإلكتروني قيد التجهيز. حاليًا تعرض المنصة الباقات والأسعار التجريبية ويمكنك التواصل معنا.", en: "Online ordering and payment are coming later. For now, the site displays demo packages and prices, and you can contact us." } },
+];
