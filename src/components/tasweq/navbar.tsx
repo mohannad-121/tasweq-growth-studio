@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import {
   ArrowUpRight,
-  CircleHelp,
   Grid2X2,
   Home,
   Instagram,
   Languages,
   Menu,
+  MessageCircle,
   X,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -155,9 +155,9 @@ export function Navbar() {
           <Instagram />
           <span>{locale === "ar" ? "ابدأ" : "Start"}</span>
         </button>
-        <button onClick={() => go("faq")}>
-          <CircleHelp />
-          <span>{locale === "ar" ? "الأسئلة" : "FAQ"}</span>
+        <button onClick={() => window.dispatchEvent(new Event("tasweq:open-chat"))}>
+          <MessageCircle />
+          <span>{locale === "ar" ? "اسأل تسويق" : "Ask Tasweq"}</span>
         </button>
       </nav>
     </>

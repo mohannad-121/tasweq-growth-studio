@@ -1,5 +1,5 @@
 "use client";
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Bot, MessageCircle, Minus, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -46,6 +46,14 @@ export function Chatbot() {
         : "Hi 👋 I’m the Tasweq Assistant. I can help with Instagram followers, views, and likes pricing.",
     },
   ]);
+  useEffect(() => {
+    const openChat = () => {
+      setOpen(true);
+      setMinimized(false);
+    };
+    window.addEventListener("tasweq:open-chat", openChat);
+    return () => window.removeEventListener("tasweq:open-chat", openChat);
+  }, []);
 
   const send = (text: string) => {
     const clean = text.trim();

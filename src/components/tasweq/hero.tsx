@@ -1,6 +1,6 @@
 "use client";
 import { motion, useReducedMotion } from "motion/react";
-import { ArrowDownLeft, ArrowUpRight, Heart, Play, Users } from "lucide-react";
+import { ArrowDownLeft, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { copy } from "@/data/content";
 import { useLanguage } from "./language-context";
@@ -11,6 +11,18 @@ export function Hero() {
   const ar = locale === "ar";
   return (
     <section id="top" className="hero-section">
+      <video
+        className="hero-background-video"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        aria-hidden="true"
+      >
+        <source src="/hero.mp4" type="video/mp4" />
+      </video>
+      <div className="hero-video-overlay" aria-hidden="true" />
       <div className="hero-noise" aria-hidden="true" />
       <div className="site-container hero-layout">
         <motion.div
@@ -32,58 +44,6 @@ export function Hero() {
             </button>
           </div>
           <div className="hero-note">Followers · Views · Likes</div>
-        </motion.div>
-        <motion.div
-          className="hero-art"
-          initial={{ opacity: 0, scale: 0.94 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.85, delay: 0.14 }}
-          aria-label={ar ? "تصور لخدمات إنستغرام" : "Instagram service illustration"}
-        >
-          <div className="sun-disc" />
-          <div className="art-ring ring-a" />
-          <div className="art-ring ring-b" />
-          <div className="hero-video-frame">
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              aria-label="Tasweq Instagram showcase"
-            >
-              <source src="/hero.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <motion.div
-            className="signal-card card-followers"
-            animate={reduced ? undefined : { y: [0, -8, 0] }}
-            transition={{ repeat: Infinity, duration: 4 }}
-          >
-            <Users />
-            <div>
-              <b>10K</b>
-              <small>Followers</small>
-            </div>
-          </motion.div>
-          <motion.div
-            className="signal-card card-views"
-            animate={reduced ? undefined : { y: [0, 7, 0] }}
-            transition={{ repeat: Infinity, duration: 4.6 }}
-          >
-            <Play />
-            <div>
-              <b>50K</b>
-              <small>Views</small>
-            </div>
-          </motion.div>
-          <div className="signal-card card-likes">
-            <Heart />
-            <div>
-              <b>10K</b>
-              <small>Likes</small>
-            </div>
-          </div>
         </motion.div>
       </div>
     </section>
