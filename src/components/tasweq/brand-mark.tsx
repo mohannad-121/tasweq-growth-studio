@@ -8,16 +8,11 @@ export function BrandMark({
   compact?: boolean;
 }) {
   return (
-    <span className={cn("inline-flex items-center gap-2.5", className)} aria-label="Tasweq">
-      <span className="brand-glyph" aria-hidden="true">
-        <i />
-        <b>ت</b>
-      </span>
-      {!compact && (
-        <span className="font-display text-lg font-bold text-foreground">
-          Tasweq <span className="text-primary">/</span> تسويق
-        </span>
-      )}
+    <span
+      className={cn("brand-mark", compact && "brand-mark-compact", className)}
+      aria-label="Tasweq"
+    >
+      <img src="/logo.jpg" alt="Tasweq" />
     </span>
   );
 }
