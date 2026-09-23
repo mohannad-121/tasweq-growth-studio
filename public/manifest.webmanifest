@@ -1,0 +1,19 @@
+{
+  "name": "Tasweq | Instagram Growth Services",
+  "short_name": "Tasweq",
+  "description": "Instagram followers, views and likes packages from Tasweq.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0D12",
+  "theme_color": "#0B0D12",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "/logo.jpg",
+      "sizes": "2816x1536",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}
