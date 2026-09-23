@@ -154,6 +154,12 @@ export function Chatbot() {
                 <PromptInputTextarea
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter" && !event.shiftKey) {
+                      event.preventDefault();
+                      send(input);
+                    }
+                  }}
                   placeholder={ar ? "اسأل عن سعر أو خدمة..." : "Ask about a price or service..."}
                 />
                 <PromptInputFooter className="justify-end">

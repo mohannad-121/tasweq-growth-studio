@@ -21,8 +21,8 @@ export const faqs: { question: Localized; answer: Localized }[] = [
   {
     question: { ar: "كيف أطلب الخدمة؟", en: "How do I request a service?" },
     answer: {
-      ar: "ببساطة اختر الخدمة والكمية ثم اضغط على زر الطلب، أو تواصل مباشرة عبر إنستغرام مع حساب @tasweq.com1.",
-      en: "Simply choose the service and package, then click the order action or contact us directly on Instagram at @tasweq.com1.",
+      ar: "ببساطة اختر الخدمة والكمية ثم اضغط على زر الطلب، أو تواصل مباشرة عبر إنستغرام مع حساب @tasweq.net1.",
+      en: "Simply choose the service and package, then click the order action or contact us directly on Instagram at @tasweq.net1.",
     },
   },
   {
@@ -35,8 +35,8 @@ export const faqs: { question: Localized; answer: Localized }[] = [
   {
     question: { ar: "كيف أتواصل مع تسويق؟", en: "How can I contact Tasweq?" },
     answer: {
-      ar: "يمكنك التواصل عبر حساب إنستغرام الرسمي: @tasweq.com1 أو الرابط التالي: https://instagram.com/tasweq.com1.",
-      en: "You can contact us through the official Instagram account: @tasweq.com1 or the link https://instagram.com/tasweq.com1.",
+      ar: "يمكنك التواصل عبر حساب إنستغرام الرسمي: @tasweq.net1 أو الرابط التالي: https://instagram.com/tasweq.net1.",
+      en: "You can contact us through the official Instagram account: @tasweq.net1 or the link https://instagram.com/tasweq.net1.",
     },
   },
   {

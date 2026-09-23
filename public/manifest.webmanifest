@@ -10,9 +10,9 @@
   "dir": "rtl",
   "icons": [
     {
-      "src": "/logo.jpg",
-      "sizes": "2816x1536",
-      "type": "image/jpeg",
+      "src": "/tasweq-icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
       "purpose": "any"
     }
   ]

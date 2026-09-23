@@ -4,7 +4,6 @@ import { ArrowDownLeft, ArrowUpRight, Heart, Play, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { copy } from "@/data/content";
 import { useLanguage } from "./language-context";
-
 const go = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 export function Hero() {
   const { t, locale } = useLanguage();
@@ -32,9 +31,7 @@ export function Hero() {
               {t(copy.hero.secondary)} <ArrowUpRight />
             </button>
           </div>
-          <div className="hero-note">
-            {ar ? "متابعين · مشاهدات · لايكات" : "Followers · Views · Likes"}
-          </div>
+          <div className="hero-note">Followers · Views · Likes</div>
         </motion.div>
         <motion.div
           className="hero-art"
@@ -46,29 +43,17 @@ export function Hero() {
           <div className="sun-disc" />
           <div className="art-ring ring-a" />
           <div className="art-ring ring-b" />
-          <div className="phone-frame">
-            <div className="phone-top">
-              <i />
-              <span>tasweq</span>
-              <i />
-            </div>
-            <div className="phone-profile">
-              <div className="profile-orb">T</div>
-              <div>
-                <b>{ar ? "تسويق" : "Tasweq"}</b>
-                <small>@tasweq.com1</small>
-              </div>
-            </div>
-            <div className="phone-grid">
-              <span />
-              <span />
-              <span />
-              <span />
-            </div>
-            <div className="phone-caption">
-              <b>{ar ? "حضور أكبر." : "Make presence felt."}</b>
-              <small>{ar ? "لإنستغرام فقط" : "Instagram only"}</small>
-            </div>
+          <div className="hero-video-frame">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-label="Tasweq Instagram showcase"
+            >
+              <source src="/hero.mp4" type="video/mp4" />
+            </video>
           </div>
           <motion.div
             className="signal-card card-followers"
@@ -78,7 +63,7 @@ export function Hero() {
             <Users />
             <div>
               <b>10K</b>
-              <small>{ar ? "متابعين" : "Followers"}</small>
+              <small>Followers</small>
             </div>
           </motion.div>
           <motion.div
@@ -89,14 +74,14 @@ export function Hero() {
             <Play />
             <div>
               <b>50K</b>
-              <small>{ar ? "مشاهدات" : "Views"}</small>
+              <small>Views</small>
             </div>
           </motion.div>
           <div className="signal-card card-likes">
             <Heart />
             <div>
               <b>10K</b>
-              <small>{ar ? "لايكات" : "Likes"}</small>
+              <small>Likes</small>
             </div>
           </div>
         </motion.div>

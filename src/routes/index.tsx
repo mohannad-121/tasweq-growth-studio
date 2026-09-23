@@ -140,6 +140,26 @@ function PageContent() {
               </p>
             </div>
             <div className="showcase-art">
+              <video
+                className="showcase-video showcase-video-main"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+              >
+                <source src="/gemini_generated_video_b84a3ec9.mp4" type="video/mp4" />
+              </video>
+              <video
+                className="showcase-video showcase-video-float"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+              >
+                <source src="/gemini_generated_video_d5b234bb.mp4" type="video/mp4" />
+              </video>
               <div className="reel-card">
                 <span>01 / REEL</span>
                 <div className="reel-play">▶</div>

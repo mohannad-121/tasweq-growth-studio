@@ -3,12 +3,12 @@ import type { Localized } from "./platforms";
 export const company = {
   name: "Tasweq",
   arabicName: "تسويق",
-  instagramHandle: "@tasweq.com1",
-  instagramUrl: "https://instagram.com/tasweq.com1",
+  instagramHandle: "@tasweq.net1",
+  instagramUrl: "https://instagram.com/tasweq.net1",
   contact: {
     instagram: {
-      handle: "@tasweq.com1",
-      url: "https://instagram.com/tasweq.com1",
+      handle: "@tasweq.net1",
+      url: "https://instagram.com/tasweq.net1",
     },
   },
   legal: {
